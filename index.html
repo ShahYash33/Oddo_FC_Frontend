@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/c1bd0c071c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Screenshot 2024-05-29 104440.png" class="logo" alt="image">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contanct.html">Contact</a></li>
+                <button class="btn"> <a href="login.html"></a>Sign In</button>
+                
+                <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Welcome to <span>FurniHaven</span></h1>
+            <p>The best Furniture renting company in India.</p>
+        </div>
+    </div>
+    
+</div>   
+
+<!-- <div id="about">
+    <li><a href="./about.html">About Us</a></li>
+</div> -->
+
+
+<script>
+
+function opentab(tabname) {
+        var tablinksvar = document.getElementsByClassName('tablinks');
+        var tabcontentvar = document.getElementsByClassName('tabcontents');
+
+        for (var i = 0; i < tablinksvar.length; i++) {
+            tablinksvar[i].classList.remove('activelink');
+        }
+        for (var j = 0; j < tabcontentvar.length; j++) {
+            tabcontentvar[j].classList.remove('activetab');
+        }
+
+        document.querySelector(`.tablinks[onclick="opentab('${tabname}')"]`).classList.add('activelink');
+        document.getElementById(tabname).classList.add('activetab');
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+
+  });
+</script>
+
+</body>
+</html>
